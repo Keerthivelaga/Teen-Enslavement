@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teen Enslavement — Gaming Addiction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .page-hero { background: radial-gradient(ellipse at 50% 50%, rgba(244,162,97,0.14) 0%, transparent 65%), var(--bg); }
+    .page-tag { background: rgba(244,162,97,0.12); border-color: rgba(244,162,97,0.35); color: var(--accent2); }
+    .page-title span { color: var(--accent2); }
+    .incident-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      overflow: hidden; transition: all 0.3s; margin-bottom: 2rem;
+    }
+    .incident-card:hover { border-color: rgba(230,57,70,0.35); box-shadow: 0 24px 48px rgba(0,0,0,0.5); transform: translateY(-4px); }
+    .incident-header {
+      padding: 32px 36px 0;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+    }
+    .incident-game-icon {
+      width: 64px; height: 64px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+    .incident-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.25);
+      color: var(--accent); font-size: 0.72rem; padding: 4px 12px;
+      border-radius: 100px; margin-bottom: 0.8rem;
+      font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .incident-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--white); margin-bottom: 0.3rem; }
+    .incident-body { padding: 20px 36px 28px; }
+    .incident-text { font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
+    .incident-meta {
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+      margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--muted);
+    }
+    .incident-meta i { color: var(--accent); }
+    .quote-block {
+      background: linear-gradient(135deg, rgba(230,57,70,0.08), rgba(244,162,97,0.06));
+      border: 1px solid rgba(230,57,70,0.2); border-radius: 16px;
+      padding: 40px; text-align: center; margin: 3rem 0;
+    }
+    .quote-block .q { font-family: 'Playfair Display', serif; font-size: 5rem; color: var(--accent); line-height: 0.5; margin-bottom: 1.5rem; }
+    .quote-block blockquote { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--white); line-height: 1.65; }
+    .warning-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 1.2rem; }
+    .warning-item {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px; display: flex; gap: 1rem; align-items: flex-start;
+      transition: border-color 0.3s;
+    }
+    .warning-item:hover { border-color: rgba(244,162,97,0.35); }
+    .warning-num {
+      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900;
+      color: rgba(244,162,97,0.35); line-height: 1; min-width: 32px;
+    }
+    .warning-title { font-size: 0.9rem; font-weight: 500; color: var(--white); margin-bottom: 4px; }
+    .warning-text { font-size: 0.82rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content fade-in">
+      <div class="page-tag"><i class="fas fa-gamepad"></i> &nbsp; Gaming Addiction</div>
+      <h1 class="page-title">When Gaming <span>Becomes Dangerous</span></h1>
+      <p class="page-sub">Real incidents where gaming addiction spiralled into tragedy — a warning for parents and teens.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header reveal">
+      <span class="section-tag-sm">Real Cases</span>
+      <h2 class="section-title">Documented Incidents</h2>
+      <p class="section-sub">These are not fictional stories. These events happened to real families.</p>
+    </div>
+
+    <div class="incident-card reveal">
+      <div class="incident-header">
+        <div class="incident-game-icon" style="background:linear-gradient(135deg,#1a0505,#3d0808);">🔫</div>
+        <div>
+          <div class="incident-badge"><i class="fas fa-exclamation-triangle"></i> Real Incident — Lucknow, India — 2022</div>
+          <div class="incident-title">Lucknow Boy Kills Mother over PUBG</div>
+        </div>
+      </div>
+      <div class="incident-body">
+        <div class="incident-text">
+          <p>A 16-year-old boy shot his mother dead after she stopped him from playing PUBG. The juvenile, described by police as severely addicted to the game, used his father's pistol during the late-night hours.</p><br/>
+          <p><em>"The police reached the spot after getting information about the incident. During the investigation, it was revealed that the 16-year-old son shot dead his mother. The minor boy shot his mother after she stopped him from playing the PUBG game,"</em> said ADCP Qasim Abidi, East Lucknow.</p><br/>
+          <p>A preliminary probe revealed the boy had been addicted to the game for an extended period, and his mother regularly intervened. He tried to mislead police during investigation by fabricating a story about an electrician. He was taken into custody and further investigation was ordered.</p>
+        </div>
+        <div class="incident-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Lucknow, Uttar Pradesh, India</span>
+          <span><i class="fas fa-calendar"></i> June 2022</span>
+          <span><i class="fas fa-gamepad"></i> PUBG Mobile</span>
+          <span><i class="fas fa-user"></i> Age: 16</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="incident-card reveal">
+      <div class="incident-header">
+        <div class="incident-game-icon" style="background:linear-gradient(135deg,#050518,#0a0a3d);">🎯</div>
+        <div>
+          <div class="incident-badge"><i class="fas fa-exclamation-triangle"></i> Real Incident — Madhya Pradesh, India — 2022</div>
+          <div class="incident-title">13-Year-Old Dies by Suicide After Free Fire Losses</div>
+        </div>
+      </div>
+      <div class="incident-body">
+        <div class="incident-text">
+          <p>A 13-year-old boy in Chhatarpur district took his own life after secretly spending ₹40,000 from his mother's bank account on the online battle royale game Free Fire. The boy and his sister were alone at home when the incident occurred.</p><br/>
+          <p>His mother, who was at work, received an SMS notification that ₹1,500 had been debited from her bank account. She called her son who confessed to having spent money on the game. After being reprimanded, the boy went to his room and hanged himself from a ceiling fan.</p><br/>
+          <p>Police investigating the case recovered a suicide note in which the minor confessed to withdrawing ₹40,000 over time and losing all of it while playing Free Fire. The case highlighted the dangers of children having unrestricted access to digital payment systems.</p>
+        </div>
+        <div class="incident-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Chhatarpur, Madhya Pradesh, India</span>
+          <span><i class="fas fa-calendar"></i> 2022</span>
+          <span><i class="fas fa-gamepad"></i> Garena Free Fire</span>
+          <span><i class="fas fa-user"></i> Age: 13</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block reveal">
+      <div class="q">"</div>
+      <blockquote>Every recovery from addiction began with one sober minute.</blockquote>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="section-header reveal">
+      <span class="section-tag-sm">Warning Signs</span>
+      <h2 class="section-title">Signs of Gaming Addiction</h2>
+    </div>
+    <div class="warning-grid">
+      <div class="warning-item reveal"><div class="warning-num">01</div><div><div class="warning-title">Preoccupation</div><div class="warning-text">Constantly thinking about the game even when not playing; talking about it excessively.</div></div></div>
+      <div class="warning-item reveal"><div class="warning-num">02</div><div><div class="warning-title">Loss of Time</div><div class="warning-text">Playing for hours without awareness of how much time has passed; missing meals and sleep.</div></div></div>
+      <div class="warning-item reveal"><div class="warning-num">03</div><div><div class="warning-title">Withdrawal Symptoms</div><div class="warning-text">Irritability, anxiety, or aggression when prevented from playing — just like substance withdrawal.</div></div></div>
+      <div class="warning-item reveal"><div class="warning-num">04</div><div><div class="warning-title">Hiding Behaviour</div><div class="warning-text">Lying about how much time is spent gaming or making secret in-game purchases.</div></div></div>
+      <div class="warning-item reveal"><div class="warning-num">05</div><div><div class="warning-title">Neglecting Responsibilities</div><div class="warning-text">Skipping school, homework, chores, or other obligations in favour of gaming.</div></div></div>
+      <div class="warning-item reveal"><div class="warning-num">06</div><div><div class="warning-title">Tolerance</div><div class="warning-text">Needing to play more and more to get the same feeling of excitement or satisfaction.</div></div></div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>buildNav('games.html'); buildFooter(); initReveal();</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teen Enslavement — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .page-hero { background: radial-gradient(ellipse at 40% 60%, rgba(230,57,70,0.1) 0%, transparent 65%), var(--bg); }
+    .two-col { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+    .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--white); margin-bottom: 0.8rem; }
+    .contact-info > p { color: var(--muted); margin-bottom: 2rem; font-size: 0.93rem; }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem;
+    }
+    .contact-item-icon {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: rgba(230,57,70,0.1); color: var(--accent);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-item-text { font-size: 0.9rem; color: var(--muted); }
+    .emergency-box {
+      background: rgba(46,196,182,0.07); border: 1px solid rgba(46,196,182,0.2);
+      border-radius: 14px; padding: 24px; margin-top: 2rem;
+    }
+    .emergency-box h4 { color: var(--accent3); font-weight: 500; margin-bottom: 8px; font-size: 0.95rem; }
+    .emergency-box p { color: var(--muted); font-size: 0.87rem; }
+    .emergency-box strong { color: var(--white); }
+    .contact-form {
+      background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 40px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: 0.78rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.3s; resize: vertical;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+    .form-group textarea { min-height: 110px; }
+    .form-group select option { background: var(--bg2); }
+    .submit-btn {
+      width: 100%; background: var(--accent); color: #fff; border: none;
+      border-radius: 8px; padding: 14px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 500;
+      cursor: pointer; transition: all 0.3s; margin-top: 0.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .submit-btn:hover { background: #c1121f; transform: translateY(-2px); }
+    @media(max-width:768px){ .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content fade-in">
+      <div class="page-tag"><i class="fas fa-envelope"></i> &nbsp; Reach Out</div>
+      <h1 class="page-title">Contact <span>Us</span></h1>
+      <p class="page-sub">Have a question, need support, or want to get involved? We're here.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="two-col">
+      <div class="contact-info reveal">
+        <h3>We're Here to Help</h3>
+        <p>Whether you're a teen struggling with addiction, a concerned parent, or an educator looking for resources — don't hesitate to reach out. All messages are treated with care and confidentiality.</p>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-text">National Helpline: <strong style="color:var(--white)">1-800-662-4357</strong></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-item-text">awareness@teenenslavement.org</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-item-text">SRKR Engineering College, Bhimavaram, Andhra Pradesh</div>
+        </div>
+        <div class="emergency-box">
+          <h4><i class="fas fa-phone-alt"></i> &nbsp; In Crisis? Call Now</h4>
+          If you are feeling overwhelmed or in crisis, please reach out immediately.Call the <strong>Tele-MANAS Mental Health Helpline (14416 or 1800-891-4416)</strong> — free, confidential, and available 24 hours a day, 7 days a week across India.</p>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="fname" placeholder="Your first name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lname" placeholder="Your last name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@email.com" />
+        </div>
+        <div class="form-group">
+          <label>I am a…</label>
+          <select id="role">
+            <option value="">Select one</option>
+            <option>Teenager seeking help</option>
+            <option>Parent / Guardian</option>
+            <option>Teacher / Counselor</option>
+            <option>Healthcare Professional</option>
+            <option>Just browsing</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="subject" placeholder="What's this about?" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="message" placeholder="How can we help you?"></textarea>
+        </div>
+        <button class="submit-btn" id="submit-btn" onclick="handleSubmit()">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>
+    buildNav('contact.html'); buildFooter(); initReveal();
+    function handleSubmit() {
+      const btn = document.getElementById('submit-btn');
+      const email = document.getElementById('email').value;
+      if (!email || !email.includes('@')) {
+        document.getElementById('email').style.borderColor = 'var(--accent)';
+        document.getElementById('email').focus();
+        return;
+      }
+      btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+      btn.style.background = 'var(--accent3)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    }
+  </script>
+</body>
+</html>

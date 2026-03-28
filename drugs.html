@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teen Enslavement — Drugs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .page-hero { background: radial-gradient(ellipse at 40% 60%, rgba(230,57,70,0.18) 0%, transparent 65%), var(--bg); }
+    .drugs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.5rem; }
+    .drug-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px; transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .drug-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--accent); opacity: 0; transition: opacity 0.3s;
+    }
+    .drug-card:hover { border-color: rgba(230,57,70,0.3); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .drug-card:hover::before { opacity: 1; }
+    .drug-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .drug-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.6rem; }
+    .drug-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.75; }
+    .drug-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(230,57,70,0.1); border: 1px solid rgba(230,57,70,0.2);
+      color: var(--accent); font-size: 0.72rem; padding: 4px 10px;
+      border-radius: 100px; margin-top: 1rem;
+    }
+    .info-box {
+      background: var(--card); border: 1px solid rgba(46,196,182,0.2);
+      border-radius: 16px; padding: 36px;
+      display: flex; gap: 2rem; align-items: flex-start;
+    }
+    .info-box-icon { font-size: 3rem; flex-shrink: 0; }
+    .info-box h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 0.8rem; }
+    .info-box p { color: var(--muted); font-size: 0.92rem; }
+    @media(max-width:600px){ .info-box { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content fade-in">
+      <div class="page-tag"><i class="fas fa-pills"></i> &nbsp; Substance Awareness</div>
+      <h1 class="page-title">Drug Types &amp; <span>Their Effects</span></h1>
+      <p class="page-sub">Understanding the dangers of different substances is the first step toward prevention and recovery.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="drugs-grid">
+      <div class="drug-card reveal">
+        <div class="drug-icon">💉</div>
+        <div class="drug-name">Injecting Drugs</div>
+        <div class="drug-desc">Injecting drugs causes severe long-term vein damage, risk of gangrene, and bloodborne infections including HIV, Hepatitis B &amp; C. Even the smallest amount of infected blood can transmit life-threatening viruses. Never share equipment, always use sterile needles.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">❄️</div>
+        <div class="drug-name">Methamphetamine (Ice)</div>
+        <div class="drug-desc">A central nervous system stimulant known as 'speed', 'goey', or 'ice'. Synthetically made and highly potent. Can be smoked, injected, swallowed, or snorted. All forms carry severe health risks including psychosis, heart attack, and stroke.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">🌿</div>
+        <div class="drug-name">Cannabis</div>
+        <div class="drug-desc">Comes from Cannabis sativa containing THC. Available as marijuana, hashish, or oil. Known as 'grass', 'pot', 'weed', and 'ganja'. Regular use affects memory, coordination, and mental health, especially in developing teenage brains.</div>
+        <div class="drug-badge"><i class="fas fa-exclamation-circle"></i> High Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">💊</div>
+        <div class="drug-name">Ecstasy (MDMA)</div>
+        <div class="drug-desc">A man-made drug with both stimulant and hallucinogenic properties. Often called 'E', 'pills', or 'eccy'. Composition varies unpredictably. Causes dangerous overheating, heart problems, and severe dehydration that can be fatal.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">🍄</div>
+        <div class="drug-name">Hallucinogens</div>
+        <div class="drug-desc">Also called 'psychedelics', they distort perception, thinking, time, and emotions. Includes LSD and magic mushrooms. Can trigger lasting psychological trauma, persistent flashbacks, and severe anxiety disorders long after use.</div>
+        <div class="drug-badge"><i class="fas fa-exclamation-circle"></i> High Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">🤍</div>
+        <div class="drug-name">Cocaine</div>
+        <div class="drug-desc">A stimulant made from coca plant leaves. Known as 'coke', 'Charlie', or 'snow'. Often mixed with other substances. Causes severe cardiovascular problems, addiction after first use, and devastating financial and personal consequences.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">😮‍💨</div>
+        <div class="drug-name">Inhalants</div>
+        <div class="drug-desc">Volatile substances like petrol, glues, and spray paints inhaled for a high. Causes confusion, nausea, and drowsiness. Sudden Sniffing Death Syndrome can occur on the very first use. Causes irreversible brain damage.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">💉</div>
+        <div class="drug-name">Sedatives (Benzodiazepines)</div>
+        <div class="drug-desc">CNS depressants like Valium and Mogadon, prescribed for stress and anxiety. Misuse leads to dependency. Combining with alcohol dramatically increases overdose risk. Withdrawal without medical supervision can be life-threatening.</div>
+        <div class="drug-badge"><i class="fas fa-exclamation-circle"></i> High Risk</div>
+      </div>
+      <div class="drug-card reveal">
+        <div class="drug-icon">💿</div>
+        <div class="drug-name">Heroin &amp; Opioids</div>
+        <div class="drug-desc">Heroin is an illegal opioid made from morphine. Opioids depress the central nervous system and are highly addictive. Overdose is the leading cause of drug-related death. Purity varies wildly, making every dose potentially fatal.</div>
+        <div class="drug-badge"><i class="fas fa-skull-crossbones"></i> Extreme Risk</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="info-box reveal">
+      <div class="info-box-icon">🆘</div>
+      <div>
+        <h3>Need Help Right Now?</h3>
+        <p>If you or someone you know is struggling with substance use, immediate help is available. The Tele-MANAS National Helpline is free, confidential, and available 24/7.</p>
+        <br/>
+        <a href="https://telemanas.mohfw.gov.in/home" target="_blank" class="btn-primary" style="margin-right:1rem;"><i class="fas fa-external-link-alt"></i> Tele-MANAS Resources</a>
+        <a href="deaddiction.html" class="btn-outline"><i class="fas fa-heart"></i> Recovery Options</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>buildNav('drugs.html'); buildFooter(); initReveal();</script>
+</body>
+</html>

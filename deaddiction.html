@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teen Enslavement — De-Addiction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .page-hero { background: radial-gradient(ellipse at 40% 60%, rgba(46,196,182,0.12) 0%, transparent 65%), var(--bg); }
+    .page-tag { background: rgba(46,196,182,0.1); border-color: rgba(46,196,182,0.3); color: var(--accent3); }
+    .page-title span { color: var(--accent3); }
+    .tabs { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap; }
+    .tab-btn {
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--muted); padding: 10px 26px; border-radius: 100px;
+      font-size: 0.85rem; font-family: 'DM Sans', sans-serif;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .tab-btn.active, .tab-btn:hover { background: var(--accent3); border-color: var(--accent3); color: #0a0a0f; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .deadd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1.5rem; }
+    .deadd-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px; transition: all 0.3s;
+    }
+    .deadd-card:hover { border-color: rgba(46,196,182,0.35); transform: translateY(-4px); }
+    .deadd-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: rgba(46,196,182,0.1); color: var(--accent3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.2rem;
+    }
+    .deadd-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.6rem; }
+    .deadd-text { font-size: 0.87rem; color: var(--muted); }
+    .cta-band {
+      background: linear-gradient(135deg, rgba(46,196,182,0.08), rgba(230,57,70,0.06));
+      border: 1px solid rgba(46,196,182,0.15); border-radius: 20px;
+      padding: 48px; text-align: center; margin-top: 4rem;
+    }
+    .cta-band h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); margin-bottom: 0.8rem; }
+    .cta-band p { color: var(--muted); max-width: 480px; margin: 0 auto 2rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content fade-in">
+      <div class="page-tag"><i class="fas fa-hands-helping"></i> &nbsp; Getting Better</div>
+      <h1 class="page-title">De-Addiction for <span>Teenagers</span></h1>
+      <p class="page-sub">Knowledge, tools, and the path to recovery — one step at a time.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="tabs reveal">
+      <button class="tab-btn active" onclick="showTab('understand', this)">Understanding Addiction</button>
+      <button class="tab-btn" onclick="showTab('types', this)">Types of Addiction</button>
+      <button class="tab-btn" onclick="showTab('tools', this)">Recovery Tools</button>
+    </div>
+
+    <div id="tab-understand" class="tab-panel active">
+      <div class="deadd-grid">
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-brain"></i></div>
+          <div class="deadd-title">What is Addiction?</div>
+          <div class="deadd-text">Addiction is a chronic, relapsing brain disease characterized by compulsive drug seeking and use despite harmful consequences. It rewires the brain's reward system, making recovery a genuine medical challenge — not just a matter of willpower.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="deadd-title">Signs &amp; Symptoms</div>
+          <div class="deadd-text">Watch for: preoccupation with the substance or behaviour, restlessness when unable to engage, physical dependence, denial of the problem, increasing tolerance requiring larger doses, and withdrawal from family and friends.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-clinic-medical"></i></div>
+          <div class="deadd-title">Treatment Approaches</div>
+          <div class="deadd-text">Effective treatment combines medical detox, medication-assisted treatment (MAT), professional counseling, therapeutic support groups, and behavioral therapies — all tailored to the individual's circumstances and needs.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-types" class="tab-panel">
+      <div class="deadd-grid">
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-pills"></i></div>
+          <div class="deadd-title">Physical Addiction</div>
+          <div class="deadd-text">Involves the brain's chemical response to substances, causing cravings and withdrawal symptoms when use stops. Common examples: alcohol, opioids, cocaine, and tobacco. Physical symptoms emerge without the substance.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-head-side-brain"></i></div>
+          <div class="deadd-title">Psychological Addiction</div>
+          <div class="deadd-text">Results from emotional factors — feelings of euphoria, escape from stress, or compulsive behavior cycles. Examples include methamphetamine, caffeine dependency, and anxiety medications used beyond prescription guidelines.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-link"></i></div>
+          <div class="deadd-title">Comorbid Addiction</div>
+          <div class="deadd-text">Addiction co-occurring alongside mental health conditions. Examples include depression with substance use disorder, bipolar disorder with compulsive gambling, and anxiety disorders paired with eating disorders.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-gamepad"></i></div>
+          <div class="deadd-title">Behavioural Addiction</div>
+          <div class="deadd-text">Addiction to activities rather than substances — gambling, gaming, social media, or eating disorders. The brain responds to these behaviours the same way it does to drugs, creating compulsive cycles that are hard to break.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-tools" class="tab-panel">
+      <div class="deadd-grid">
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-users"></i></div>
+          <div class="deadd-title">Support Groups</div>
+          <div class="deadd-text">Find strength in community. Support groups connect you with others sharing similar struggles — a place to share experiences, receive encouragement, and build accountability that significantly improves recovery outcomes.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-book-open"></i></div>
+          <div class="deadd-title">Self-Help Books</div>
+          <div class="deadd-text">Numerous books offer evidence-based insights and practical guidance for overcoming addiction. They provide valuable perspectives and strategies to supplement professional treatment and enhance your recovery journey.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-capsules"></i></div>
+          <div class="deadd-title">Medication-Assisted Treatment</div>
+          <div class="deadd-text">MAT combines evidence-based medications (like Suboxone and Vivitrol) with behavioral therapy to address both physical and mental aspects of addiction. Proven to dramatically increase the likelihood of sustained, long-term recovery.</div>
+        </div>
+        <div class="deadd-card reveal">
+          <div class="deadd-icon"><i class="fas fa-user-md"></i></div>
+          <div class="deadd-title">Professional Counseling</div>
+          <div class="deadd-text">Working with a licensed mental health professional helps address the psychological and emotional root causes of addiction. Cognitive Behavioral Therapy (CBT) and other evidence-based approaches have strong success rates.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band reveal">
+      <h3>Ready to Take the First Step?</h3>
+      <p>Recovery is possible. Every journey begins with a single decision. Whether you're a teen struggling, or a parent looking for answers — help is here.</p>
+      <div class="cta-btns">
+        <a href="recovery.html" class="btn-primary"><i class="fas fa-road"></i> Recovery Journey</a>
+        <a href="contact.html" class="btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>
+    buildNav('deaddiction.html'); buildFooter(); initReveal();
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

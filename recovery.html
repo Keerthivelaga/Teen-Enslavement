@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teen Enslavement — Recovery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .page-hero { background: radial-gradient(ellipse at 60% 40%, rgba(244,162,97,0.12) 0%, transparent 65%), var(--bg); }
+    .page-tag { background: rgba(244,162,97,0.1); border-color: rgba(244,162,97,0.3); color: var(--accent2); }
+    .page-title span { color: var(--accent2); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+    .step {
+      display: flex; gap: 1.5rem;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 26px; margin-bottom: 1.5rem; transition: all 0.3s;
+    }
+    .step:hover { border-color: rgba(244,162,97,0.35); transform: translateX(6px); }
+    .step-num {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900;
+      color: rgba(244,162,97,0.3); line-height: 1; min-width: 52px;
+    }
+    .step-title { font-weight: 500; color: var(--white); margin-bottom: 5px; font-size: 1rem; }
+    .step-text { font-size: 0.87rem; color: var(--muted); }
+    .quote-panel {
+      background: linear-gradient(135deg, rgba(244,162,97,0.08), rgba(230,57,70,0.07));
+      border: 1px solid rgba(244,162,97,0.18); border-radius: 20px; padding: 40px;
+    }
+    .quote-mark { font-family: 'Playfair Display', serif; font-size: 5.5rem; color: var(--accent2); line-height: 0.5; margin-bottom: 1.5rem; }
+    .quote-text { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--white); line-height: 1.65; margin-bottom: 1.8rem; }
+    .quote-tools { display: flex; flex-direction: column; gap: 0.9rem; }
+    .qt {
+      display: flex; align-items: center; gap: 1rem;
+      background: rgba(255,255,255,0.04); border-radius: 10px; padding: 14px 18px;
+    }
+    .qt i { color: var(--accent2); font-size: 1rem; min-width: 20px; }
+    .qt span { font-size: 0.87rem; color: var(--text); }
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 2rem; }
+    .video-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; transition: all 0.3s;
+    }
+    .video-card:hover { border-color: rgba(244,162,97,0.35); transform: translateY(-4px); }
+    .video-card iframe { width: 100%; height: 200px; border: none; display: block; }
+    .video-body { padding: 20px; }
+    .video-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 6px; }
+    .video-sub { font-size: 0.82rem; color: var(--muted); }
+    .map-section { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .map-section iframe { width: 100%; height: 320px; border: none; display: block; }
+    .map-label { padding: 20px 24px; }
+    .map-label h4 { font-family: 'Playfair Display', serif; color: var(--white); margin-bottom: 4px; }
+    .map-label p { font-size: 0.85rem; color: var(--muted); }
+    .video-thumb {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  padding: 14px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+}
+
+.video-card:hover .play-btn {
+  background: var(--accent2);
+}
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content fade-in">
+      <div class="page-tag"><i class="fas fa-road"></i> &nbsp; The Journey</div>
+      <h1 class="page-title">Overcoming <span>Addiction</span></h1>
+      <p class="page-sub">Recovery is possible. Here are the steps, tools, and motivation to begin.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+          <span class="section-tag-sm">Step by Step</span>
+          <h2 class="section-title" style="font-size:1.9rem;">The Road to Recovery</h2>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Recognize the Problem</div>
+            <div class="step-text">Many believe they can quit any time. The most critical first step is honestly acknowledging that addiction is a real, recognised disease — not a weakness or a choice.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Seek Professional Help</div>
+            <div class="step-text">Medical detoxification safely removes substances from the body under supervision. Professional guidance minimises dangerous withdrawal symptoms and provides a safe foundation for recovery.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Counseling &amp; Therapy</div>
+            <div class="step-text">Work with licensed mental health professionals to address root causes. Behavioral therapies like CBT replace destructive patterns with healthy, sustainable coping mechanisms.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">04</div>
+          <div>
+            <div class="step-title">Build a Support System</div>
+            <div class="step-text">Join therapeutic groups and lean on family. Community, accountability, and shared understanding are essential pillars of successful long-term sobriety.</div>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">05</div>
+          <div>
+            <div class="step-title">Maintain &amp; Thrive</div>
+            <div class="step-text">Recovery is a lifelong journey, not a destination. Continue attending support groups, celebrating milestones, and building a fulfilling life that makes sobriety worth protecting.</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-panel reveal">
+        <div class="quote-mark">"</div>
+        <div class="quote-text">Recovery is not a race. You don't have to feel guilty if it takes you longer than you thought it would.</div>
+        <div style="color:var(--muted); font-size:0.82rem; margin-bottom:2rem;">— Recovery Wisdom</div>
+        <div class="quote-tools">
+          <div class="qt"><i class="fas fa-users"></i><span>Support Groups &amp; Community Meetings</span></div>
+          <div class="qt"><i class="fas fa-book"></i><span>Journaling &amp; Self-Help Literature</span></div>
+          <div class="qt"><i class="fas fa-user-md"></i><span>Professional Medical Counselling</span></div>
+          <div class="qt"><i class="fas fa-dumbbell"></i><span>Physical Activity &amp; Healthy Habits</span></div>
+          <div class="qt"><i class="fas fa-capsules"></i><span>Medication-Assisted Treatment (MAT)</span></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="https://telemanas.mohfw.gov.in/home" target="_blank" class="btn-primary" style="width:100%; justify-content:center;"><i class="fas fa-external-link-alt"></i> Tele-MANAS(national mental health program)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="section section-alt">
+  <div class="section-header reveal">
+    <span class="section-tag-sm">Watch & Learn</span>
+    <h2 class="section-title">Motivational Videos</h2>
+    <p class="section-sub">Hear from those who have been there — real stories of strength and recovery.</p>
+  </div>
+
+  <div class="video-grid">
+
+    <!-- Video 1 -->
+    <div class="video-card reveal" onclick="openVideo('EHmC2D0_Hdg')">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/EHmC2D0_Hdg/hqdefault.jpg">
+        <div class="play-btn"><i class="fas fa-play"></i></div>
+      </div>
+      <div class="video-body">
+        <div class="video-title">Overcoming Drug Addiction</div>
+        <div class="video-sub">Motivation to take the first step toward freedom.</div>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-card reveal" onclick="openVideo('QGe_cG3g6kw')">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/QGe_cG3g6kw/hqdefault.jpg">
+        <div class="play-btn"><i class="fas fa-play"></i></div>
+      </div>
+      <div class="video-body">
+        <div class="video-title">Overcoming Social Media Addiction</div>
+        <div class="video-sub">Reclaim your attention and your life.</div>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-card reveal" onclick="openVideo('EHmC2D0_Hdg')">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/9tXhLNIuUrI/hqdefault.jpg">
+        <div class="play-btn"><i class="fas fa-play"></i></div>
+      </div>
+      <div class="video-body">
+        <div class="video-title">Overcoming Gaming Addiction</div>
+        <div class="video-sub">Find balance beyond the screen.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="section">
+    <div class="section-header reveal">
+      <span class="section-tag-sm">Find Help Near You</span>
+      <h2 class="section-title">De-Addiction Centres</h2>
+      <p class="section-sub">Professional rehabilitation and de-addiction centres are located across India.</p>
+    </div>
+    <div style="display:grid; gap:20px;">
+
+  <!-- Chennai -->
+  <div class="map-section reveal">
+    <iframe src="https://www.google.com/maps?q=Divine Rehabilitation Centre Chennai&output=embed"
+      allowfullscreen loading="lazy"></iframe>
+    <div class="map-label">
+      <h4><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+        Divine Rehabilitation Centre, Chennai</h4>
+      <p>Leading rehab centre offering treatment for alcohol and drug addiction.</p>
+      <a href="https://maps.google.com/?q=Divine Rehabilitation Centre Chennai" target="_blank" class="btn-outline">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+
+  <!-- Bangalore -->
+  <div class="map-section reveal">
+    <iframe src="https://www.google.com/maps?q=NIMHANS Bangalore&output=embed"
+      allowfullscreen loading="lazy"></iframe>
+    <div class="map-label">
+      <h4><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+        NIMHANS, Bangalore</h4>
+      <p>India’s premier mental health institute providing advanced addiction treatment.</p>
+      <a href="https://maps.google.com/?q=NIMHANS Bangalore" target="_blank" class="btn-outline">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+
+  <!-- Hyderabad -->
+  <div class="map-section reveal">
+    <iframe src="https://www.google.com/maps?q=Hope Trust Hyderabad&output=embed"
+      allowfullscreen loading="lazy"></iframe>
+    <div class="map-label">
+      <h4><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+        Hope Trust, Hyderabad</h4>
+      <p>Holistic de-addiction centre focusing on long-term recovery.</p>
+      <a href="https://maps.google.com/?q=Hope Trust Hyderabad" target="_blank" class="btn-outline">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+
+  <!-- Delhi -->
+  <div class="map-section reveal">
+    <iframe src="https://www.google.com/maps?q=AIIMS Addiction Centre Delhi&output=embed"
+      allowfullscreen loading="lazy"></iframe>
+    <div class="map-label">
+      <h4><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+        AIIMS Drug Dependence Centre, Delhi</h4>
+      <p>Government-run centre providing medical detox and psychiatric care.</p>
+      <a href="https://maps.google.com/?q=AIIMS Addiction Centre Delhi" target="_blank" class="btn-outline">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+
+  <!-- Mumbai -->
+  <div class="map-section reveal">
+    <iframe src="https://www.google.com/maps?q=Vandrevala Foundation Mumbai&output=embed"
+      allowfullscreen loading="lazy"></iframe>
+    <div class="map-label">
+      <h4><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+        Vandrevala Foundation, Mumbai</h4>
+      <p>Provides mental health and addiction recovery support services.</p>
+      <a href="https://maps.google.com/?q=Vandrevala Foundation Mumbai" target="_blank" class="btn-outline">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+
+</div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>
+buildNav('recovery.html');
+buildFooter();
+initReveal();
+
+const searchInput = document.getElementById("searchInput");
+const cityFilter = document.getElementById("cityFilter");
+
+if (searchInput && cityFilter) {
+  searchInput.addEventListener("input", filterCenters);
+  cityFilter.addEventListener("change", filterCenters);
+}
+
+function filterCenters() {
+  const searchValue = searchInput.value.toLowerCase();
+  const selectedCity = cityFilter.value;
+
+  const cards = document.querySelectorAll(".video-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector(".video-title").innerText.toLowerCase();
+    const city = card.getAttribute("data-city");
+
+    const matchSearch = title.includes(searchValue);
+    const matchCity = selectedCity === "all" || city === selectedCity;
+
+    card.style.display = (matchSearch && matchCity) ? "block" : "none";
+  });
+}
+function openVideo(id) {
+  window.open(`https://www.youtube.com/watch?v=${id}`, "_blank");
+}
+</script>
+</body>
+</html>
